@@ -6,8 +6,15 @@ def solve(inputs):
     if not inputs:
         path = (os.path.abspath(__file__).replace("/days/day_1.py", "/raw_inputs/raw_input_1.text"))
         file = open(path, "r")
-    elves = inputs or file.readlines()
+        inputs = file.readlines()
+        file.close()
+        path = (os.path.abspath(__file__).replace("/days/day_1.py", "/inputs/inputs_day_1.py"))
+        file = open(path, "a")
+        file.truncate(0)
+        file.write("inputs = %s" %inputs)
+        file.close()
 
+    elves = inputs
     for elve in elves:
         if elve == "\n":
             current_elve+=1

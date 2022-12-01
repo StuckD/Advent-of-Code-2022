@@ -13,7 +13,7 @@ input_list.remove("__pycache__")
 for m in day_list:
     day_modules.append(__import__(m.replace(".py", "")))
 for i in input_list:
-    input_modules.append(__import__("inputs_" + m.replace(".py", "")).input)
+    input_modules.append(__import__("inputs_" + m.replace(".py", "")).inputs)
 
 argument_list = sys.argv[1:]
 if argument_list[1:]:
