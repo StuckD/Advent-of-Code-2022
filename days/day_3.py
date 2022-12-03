@@ -1,16 +1,5 @@
 import os
 def solve(inputs):
-        if not inputs:
-            path = (os.path.abspath(__file__).replace("/days/day_3.py", "/raw_inputs/raw_input_3.text"))
-            file = open(path, "r")
-            inputs = file.readlines()
-            file.close()
-            path = (os.path.abspath(__file__).replace("/days/day_3.py", "/inputs/inputs_day_3.py"))
-            file = open(path, "a")
-            file.truncate(0)
-            file.write("inputs = %s" %inputs)
-            file.close()
-
         rucksacks = []
         for j in inputs:
             i = j.replace("\n", "")

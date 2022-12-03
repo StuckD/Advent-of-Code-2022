@@ -1,17 +1,6 @@
 import os
 
 def solve(inputs):
-    if not inputs:
-        path = (os.path.abspath(__file__).replace("/days/day_2.py", "/raw_inputs/raw_input_2.text"))
-        file = open(path, "r")
-        inputs = file.readlines()
-        file.close()
-        path = (os.path.abspath(__file__).replace("/days/day_2.py", "/inputs/inputs_day_2.py"))
-        file = open(path, "a")
-        file.truncate(0)
-        file.write("inputs = %s" %inputs)
-        file.close()
-
     strategy = []
     raw_strategy = inputs
     for i in raw_strategy:
