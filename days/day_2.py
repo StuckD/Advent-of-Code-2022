@@ -47,7 +47,7 @@ def solve(inputs):
     # part 2
     win_score = 0
     for s in strategy:
-        if s[1] == "X": #verlieren
+        if s[1] == "X": #lose
             win_score +=0
             if s[0] == "A":
                 win_score+=3
@@ -55,7 +55,7 @@ def solve(inputs):
                 win_score+=1
             elif s[0] == "C":
                 win_score+=2
-        elif s[1] == "Y": # unentschieden
+        elif s[1] == "Y": # draw
             win_score +=3
             if s[0] == "A":
                 win_score+=1
@@ -63,7 +63,7 @@ def solve(inputs):
                 win_score+=2
             elif s[0] == "C":
                 win_score+=3
-        elif s[1] == "Z": #gewinnen
+        elif s[1] == "Z": #win
             win_score +=6
             if s[0] == "A":
                 win_score+=2
@@ -71,7 +71,6 @@ def solve(inputs):
                 win_score+=3
             elif s[0] == "C":
                 win_score+=1
-
 
     return([total_score, win_score])
 

@@ -8,8 +8,10 @@ day_modules = []
 input_modules = []
 day_list = os.listdir("days")
 input_list = os.listdir("inputs")
-day_list.remove("__pycache__")
-input_list.remove("__pycache__")
+day_list.sort()
+input_list.sort()
+day_list.pop(0)
+input_list.pop(0)
 for m in day_list:
     day_modules.append(__import__(m.replace(".py", "")))
 for i in input_list:
